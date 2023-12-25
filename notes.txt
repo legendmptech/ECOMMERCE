@@ -1,0 +1,12 @@
+// PRODUCTS & IMAGES
+
+TSHIRTS
+1) prod -> 6581b4cb8ed68658fcf49d4d,img -> 6581b8a68ed68658fcf49d55
+2) prod -> 6581bebd8ed68658fcf49d5a,img -> 6581bd888ed68658fcf49d58
+3) prod -> 6588dfcbd51b8c8554bcbc9d,img -> 6588df24d51b8c8554bcbc9b
+4) prod -> 6588e1e3d51b8c8554bcbca1,img -> 6588e11fd51b8c8554bcbc9f
+
+PANTS
+
+1) prod -> 6588e423d51b8c8554bcbca6, img -> 6588e355d51b8c8554bcbca4
+2) prod -> 6588e562d51b8c8554bcbcaa, img -> 6588e4d9d51b8c8554bcbca8

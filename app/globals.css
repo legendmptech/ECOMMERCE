@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+  }
+}
+
+@layer base {
+  * {
+    @apply box-border relative z-0 text-xs xs:text-sm sm:text-lg;
+  }
+  h1 {
+    @apply text-lg sm:text-xl font-bold;
+  }
+  h2 {
+    @apply text-base sm:text-base font-semibold;
+  }
+  p {
+    @apply text-sm font-extralight;
+  }
+  a {
+    @apply text-base font-light;
+  }
+}
