@@ -68,55 +68,57 @@ const Navbar = async () => {
           </ul>
         </div>
         <div className="navbar-end">
-          {session ? (
-            <div className="flex gap-4 items-center cursor-pointer">
-              {/* SHOPPING CART SIDEBAR */}
-              <CartIcon />
-              {/* ____________________PROFILE PICTURE_________________________ */}
-              <div className="dropdown dropdown-end z-10">
-                <label
-                  tabIndex={0}
-                  className="btn btn-ghost btn-circle avatar z-30"
-                >
-                  <div className="rounded-full">
-                    <Image
-                      alt="profile picture"
-                      src={session.user?.image}
-                      className="z-30 w-[40px] h-[40px]"
-                      width={40}
-                      height={40}
-                    />
-                  </div>
-                </label>
-                <ul
-                  tabIndex={0}
-                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-                >
-                  <li>
-                    <Link href={"#"} className="justify-between">
-                      Profile
-                      <span className="badge">New</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={"#"}>Settings</Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={"/api/auth/signout"}
-                      className="hover:bg-red-300"
-                    >
-                      SignOut
-                    </Link>
-                  </li>
-                </ul>
+          {/* SHOPPING CART SIDEBAR */}
+          <div className="flex flex-row gap-4 items-center">
+            <CartIcon />
+            {session ? (
+              <div className="flex gap-4 items-center cursor-pointer">
+                {/* ____________________PROFILE PICTURE_________________________ */}
+                <div className="dropdown dropdown-end z-10">
+                  <label
+                    tabIndex={0}
+                    className="btn btn-ghost btn-circle avatar z-30"
+                  >
+                    <div className="rounded-full">
+                      <Image
+                        alt="profile picture"
+                        src={session.user?.image}
+                        className="z-30 w-[40px] h-[40px]"
+                        width={40}
+                        height={40}
+                      />
+                    </div>
+                  </label>
+                  <ul
+                    tabIndex={0}
+                    className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                  >
+                    <li>
+                      <Link href={"#"} className="justify-between">
+                        Profile
+                        <span className="badge">New</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"#"}>Settings</Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={"/api/auth/signout"}
+                        className="hover:bg-red-300"
+                      >
+                        SignOut
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          ) : (
-            <Link className="btn btn-accent" href="/api/auth/signin">
-              SignIn
-            </Link>
-          )}
+            ) : (
+              <Link className="btn btn-accent" href="/api/auth/signin">
+                SignIn
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </nav>
