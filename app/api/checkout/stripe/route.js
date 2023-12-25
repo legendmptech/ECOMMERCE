@@ -26,8 +26,8 @@ export async function POST(req) {
       payment_method_types: ["card"],
       line_items: lineItems,
       mode: "payment",
-      success_url: "http://localhost:3000/checkout/success",
-      cancel_url: "http://localhost:3000/checkout/cancel",
+      success_url: `${process.env.NEXT_PUBLIC_URL}/checkout/success`,
+      cancel_url: `${process.env.NEXT_PUBLIC_URL}/checkout/cancel`,
       billing_address_collection: "required",
       shipping_address_collection: {
         allowed_countries: ["IN"],
