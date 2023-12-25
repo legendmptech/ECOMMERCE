@@ -28,7 +28,7 @@ export default async function Home({ params: {}, searchParams: { category } }) {
       )}
       <Suspense fallback={<Loading />}>
         <div className="w-full max-w-5xl flex flex-col items-center justify-center gap-5 md:flex-row flex-wrap">
-          {products.map((product) => (
+          {products?.map((product) => (
             <ProductCard key={product.id} {...product} />
           ))}
         </div>
