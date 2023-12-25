@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import ProductCard from "../../components/ProductCard";
 import Loading from "@/app/loading";
-import Head from "next/head";
 
 export const metadata = {
   title: "Products in MensFit",

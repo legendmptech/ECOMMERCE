@@ -1,7 +1,6 @@
 import Product from "@/app/components/Product";
 import React from "react";
 import ProductImageCarousel from "./ProductImageCarousel";
-import Head from "next/head";
 
 const ProductPage = async ({ params: { id } }) => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/product/${id}`, {
@@ -21,11 +20,6 @@ const ProductPage = async ({ params: { id } }) => {
   const images = await imageRes.json();
   return (
     <div className="w-full flex flex-col items-center">
-      <Head>
-        <title>{product?.name} | MensFit</title>
-        <meta name="description" content={product?.desc + " | MensFit"} />
-        {/* Add more meta tags as needed */}
-      </Head>
       <h1 className="mt-4 xsm:mb-5 font-light px-5 underline sm:no-underline">
         {product?.name}
       </h1>
