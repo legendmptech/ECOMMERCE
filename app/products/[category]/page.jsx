@@ -23,9 +23,10 @@ export default async function Home({ params: { category } }) {
       <h1 className="my-6">{category.toUpperCase()}S</h1>
       <Suspense fallback={<Loading />}>
         <div className="w-full max-w-5xl flex flex-col items-center justify-center gap-5 md:flex-row flex-wrap">
-          {products.map((product) => (
-            <ProductCard key={product.id} {...product} />
-          ))}
+          {Array.isArray(products) &&
+            products.map((product) => (
+              <ProductCard key={product.id} {...product} />
+            ))}
         </div>
       </Suspense>
     </main>
