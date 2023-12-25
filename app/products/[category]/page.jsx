@@ -19,9 +19,6 @@ export default async function Home({ params: { category } }) {
   const products = await res.json();
   return (
     <main className="w-full flex flex-col items-center">
-      <Head>
-        <title>Products in MensFit</title>
-      </Head>
       {/* PRODUCTS DISPLAY */}
       <h1 className="my-6">{category.toUpperCase()}S</h1>
       <Suspense fallback={<Loading />}>
